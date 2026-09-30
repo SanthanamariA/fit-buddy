@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitBuddy</title>
+<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head><body>
+<header class="nav"><a class="brand" href="/">Fit<span>Buddy</span></a><nav><a href="/">Generator</a><a href="/admin.html">Admin</a></nav></header>
+<main class="container">
+<div id="home">
+<section class="hero"><p class="eyebrow">AI FITNESS PLANNER</p>
+<h1>Build a plan that fits <span>your goal.</span></h1>
+<p class="subtitle">Generate a structured 7-day workout plan and a practical nutrition/recovery tip. Refine it later with feedback.</p></section>
+<div id="err" class="alert error hidden"></div>
+<section class="card form-card">
+<div class="card-heading"><div><p class="eyebrow">STEP 01</p><h2>Your fitness profile</h2></div><span class="badge">Gemini AI</span></div>
+<form id="gen" class="form-grid">
+<label>Name<input name="username" placeholder="e.g. Deep" required minlength="2" maxlength="100"></label>
+<label>User ID<input name="user_id" placeholder="e.g. FIT001" required minlength="2" maxlength="80"></label>
+<label>Age<input name="age" type="number" min="13" max="100" placeholder="20" required></label>
+<label>Weight (kg)<input name="weight" type="number" min="21" max="300" step="0.1" placeholder="65" required></label>
+<label>Fitness goal<select name="goal"><option value="weight loss">Weight loss</option><option value="muscle gain">Muscle gain</option><option value="general wellness">General wellness</option><option value="flexibility">Flexibility</option></select></label>
+<label>Workout intensity<select name="intensity"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option></select></label>
+<div class="full"><button id="genBtn" class="button primary" type="submit">Generate 7-Day Plan →</button></div>
+</form></section>
+<section class="feature-grid">
+<article class="mini-card"><strong>01</strong><h3>Personalized</h3><p>Uses your age, weight, goal and preferred intensity.</p></article>
+<article class="mini-card"><strong>02</strong><h3>AI-powered</h3><p>Gemini creates structured workout and nutrition guidance.</p></article>
+<article class="mini-card"><strong>03</strong><h3>Adaptive</h3><p>Submit feedback and regenerate your plan.</p></article>
+</section></div>
+
+<div id="result" class="hidden">
+<div id="msg" class="alert success hidden"></div>
+<section class="result-header"><div><p class="eyebrow">YOUR PERSONAL PLAN</p><h1 id="rName"></h1><p class="subtitle" id="rSub"></p></div>
+<a class="button secondary" href="/">Create another</a></section>
+<section class="profile-strip" id="strip"></section>
+<section class="card"><div class="card-heading"><div><p class="eyebrow">WORKOUT</p><h2 id="planTitle">Original 7-Day Plan</h2></div><span class="badge" id="planBadge">AI generated</span></div>
+<div id="plan"></div></section>
+<section class="card tip-card"><p class="eyebrow">NUTRITION / RECOVERY</p><h2>One useful tip</h2><pre class="tip" id="tip"></pre></section>
+<section class="card feedback-card"><p class="eyebrow">STEP 02</p><h2>Improve this plan</h2>
+<p class="muted">Examples: “more cardio”, “make it easier”, “add two recovery days”.</p>
+<form id="fb"><textarea id="fbText" maxlength="1000" minlength="3" required placeholder="Tell FitBuddy what you want to change..."></textarea>
+<button id="fbBtn" class="button primary" type="submit">Update Plan with AI →</button></form></section>
+<p class="disclaimer">FitBuddy provides general educational fitness information and is not a substitute for a qualified healthcare or fitness professional. Stop exercise if you experience pain, dizziness or unusual symptoms.</p>
+</div>
+</main>
+<footer class="footer"><p>FitBuddy • AI-generated fitness education • Not medical advice</p></footer>
+<script src="/js/app.js"></script></body></html>

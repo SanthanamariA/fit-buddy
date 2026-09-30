@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitBuddy Admin</title>
+<link rel="stylesheet" href="/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head><body>
+<header class="nav"><a class="brand" href="/">Fit<span>Buddy</span></a><nav><a href="/">Generator</a><a href="/admin.html">Admin</a></nav></header>
+<main class="container">
+<section id="login" class="center-card card"><p class="eyebrow">ADMIN</p><h1>Dashboard</h1>
+<p class="muted">Enter the admin password to view users saved in this browser.</p>
+<div id="aerr" class="alert error hidden"></div>
+<form id="lf"><label>Password<input type="password" id="pw" required></label><button class="button primary" type="submit">Open Dashboard</button></form></section>
+<section id="dash" class="hidden">
+<div class="result-header"><div><p class="eyebrow">ADMIN DASHBOARD</p><h1>Registered users</h1><p class="subtitle" id="count"></p></div><a class="button secondary" href="/">Back</a></div>
+<div class="table-wrap"><table><thead><tr><th>User</th><th>Profile</th><th>Goal</th><th>Original plan</th><th>Updated plan</th><th>Action</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+</main>
+<footer class="footer"><p>FitBuddy • AI-generated fitness education • Not medical advice</p></footer>
+<script src="/js/admin.js"></script></body></html>
